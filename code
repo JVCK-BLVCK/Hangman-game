@@ -1,8 +1,9 @@
+#initialize the game using a list of words and initial game state
 import random
 
+
 def hangman():
-    words = ["python", "hangman", "game",
-             "programming"]  # Example list of words
+    words =  ['apple', 'banana', 'orange', 'strawberry', 'watermelon'] # Example list of words
 
     play_again = True
 
@@ -14,7 +15,7 @@ def hangman():
 
         print("Welcome to Hangman!")
         print("_ " * len(chosen_word))
-
+#get user guess and and guessed letter 
         while incorrect_guesses < max_incorrect_guesses:
             guess = input("Enter a letter: ").lower()
 
@@ -40,7 +41,7 @@ def hangman():
                 else:
                     displayed_word += "_ "
             print(displayed_word)
-
+#chesck and update game status 
             if "_" not in displayed_word:
                 print("Congratulations! You guessed the word.")
                 break
